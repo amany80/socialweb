@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman.zenith — Creator & Digital Assets</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#080809',      /* Deep Charcoal / Carbon Base */
+                        cardBg: '#121215',      /* Rich Dark Card Surface */
+                        cardBorder: '#232328',  /* Subdued Border */
+                        goldAccent: '#e2b170',  /* Warm Aesthetic Gold Accent */
+                        goldHover: '#d4a15f',
+                        goldGlow: 'rgba(226, 177, 112, 0.15)',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Newsreader -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #080809;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(226, 177, 112, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            background-attachment: fixed;
+            color: #f3f4f6;
+        }
+        .aesthetic-card {
+            background-color: #121215;
+            border: 1px solid #232328;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .aesthetic-card:hover {
+            border-color: rgba(226, 177, 112, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px -8px rgba(226, 177, 112, 0.12);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fce0b6 0%, #e2b170 50%, #b8863b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .avatar-glow {
+            box-shadow: 0 0 35px rgba(226, 177, 112, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-goldAccent selection:text-black">
+
+    <!-- 1. Header / Top Navigation -->
+    <header class="sticky top-0 z-50 bg-[#080809]/90 backdrop-blur-md border-b border-cardBorder">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-goldAccent text-black flex items-center justify-center font-extrabold text-sm shadow-md">
+                    AX
+                </div>
+                <span class="font-bold text-base tracking-tight text-white">Aman.zenith</span>
+            </a>
+
+            <nav class="hidden sm:flex items-center gap-6 text-xs font-medium text-gray-400">
+                <a href="#about" class="hover:text-goldAccent transition">About</a>
+                <a href="#socials" class="hover:text-goldAccent transition">Socials</a>
+                <a href="#products" class="hover:text-goldAccent transition">Products</a>
+                <a href="#faq" class="hover:text-goldAccent transition">FAQ</a>
+            </nav>
+
+            <a href="mailto:amanyaseen800@gmail.com" class="px-4 py-2 rounded-lg bg-goldAccent hover:bg-goldHover text-black text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-16 w-full">
+
+        <!-- SECTION 1: Profile & Bio (Website Open Hote Hi Immediate Focus) -->
+        <section id="about" class="text-center space-y-6 pt-4">
+            
+            <!-- PROFILE PHOTO CONTAINER -->
+            <div class="relative w-36 h-36 mx-auto">
+                <div class="w-full h-full rounded-full p-1 bg-gradient-to-tr from-goldAccent via-amber-200 to-amber-700 avatar-glow">
+                    <!-- REPLACE YOUR PHOTO URL IN THE SRC BELOW -->
+                    <img 
+                        src="6224265660930396582_121.jpg" 
+                        alt="Aman — Aman.zenith" 
+                        class="w-full h-full object-cover rounded-full border-2 border-darkBg"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x300/121215/e2b170?text=Aman+Yaseen';"
+                    />
+                </div>
+                <span class="absolute bottom-1 right-2 w-5 h-5 bg-emerald-500 border-2 border-darkBg rounded-full" title="Available for collaborations"></span>
+            </div>
+
+            <!-- NAME & BIO -->
+            <div class="space-y-3 max-w-xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-goldAccent/10 border border-goldAccent/20 text-goldAccent text-xs font-medium">
+                    <span>✨</span> Aman • Tech Creator
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                    Hi, I'm Aman <span class="text-goldAccent font-serif italic text-2xl sm:text-3xl">(@Aman.zenith)</span>
+                </h1>
+                
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    Creating <span class="text-white font-semibold">aesthetic digital assets</span>, Canva starter kits, and practical resources to help freelancers and visual creators scale their content.
+                </p>
+            </div>
+
+            <!-- QUICK STATS BAR -->
+            <div class="pt-4 flex items-center justify-center gap-8 border-y border-cardBorder/60 py-4 max-w-lg mx-auto text-xs text-gray-400">
+                <div>
+                    <span class="block text-base font-bold text-white">30+</span>
+                    <span>Canva Templates</span>
+                </div>
+                <div class="w-px h-6 bg-cardBorder"></div>
+                <div>
+                    <span class="block text-base font-bold text-white">10+</span>
+                    <span>Master Prompts</span>
+                </div>
+                <div class="w-px h-6 bg-cardBorder"></div>
+                <div>
+                    <span class="block text-base font-bold text-white">4K</span>
+                    <span>Visual Assets</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2: Aesthetic Social Links & Community Hub -->
+        <section id="socials" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-goldAccent flex items-center gap-2">
+                    <i class="fa-solid fa-compass"></i> Connect & Follow
+                </h2>
+                <span class="text-[11px] text-gray-500 font-serif italic">Social Media Hub</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+
+                <!-- YouTube Card -->
+                <a href="https://youtube.com" target="_blank" class="aesthetic-card p-4 rounded-2xl flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 flex items-center justify-center text-xl group-hover:scale-105 transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm text-white group-hover:text-goldAccent transition">YouTube Channel</h3>
+                            <p class="text-xs text-gray-400">Tutorials & asset guides</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 group-hover:text-goldAccent transition"></i>
+                </a>
+
+                <!-- Pinterest Card -->
+                <a href="https://pin.it/75jXU9hpU" target="_blank" class="aesthetic-card p-4 rounded-2xl flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-red-600/10 border border-red-600/20 text-red-600 flex items-center justify-center text-xl group-hover:scale-105 transition">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm text-white group-hover:text-goldAccent transition">Pinterest Pins</h3>
+                            <p class="text-xs text-gray-400">Visual inspiration & design</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 group-hover:text-goldAccent transition"></i>
+                </a>
+
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/amxn.zenith?dlrf=MXF1eHRqYW5kd2pvaA==" target="_blank" class="aesthetic-card p-4 rounded-2xl flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl group-hover:scale-105 transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm text-white group-hover:text-goldAccent transition">Instagram</h3>
+                            <p class="text-xs text-gray-400">Daily creator updates</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 group-hover:text-goldAccent transition"></i>
+                </a>
+
+                <!-- Direct Email Card -->
+                <a href="mailto:amanyaseen800@gmail.com" class="aesthetic-card p-4 rounded-2xl flex items-center justify-between group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-goldAccent/10 border border-goldAccent/20 text-goldAccent flex items-center justify-center text-xl group-hover:scale-105 transition">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm text-white group-hover:text-goldAccent transition">Direct Email</h3>
+                            <p class="text-xs text-gray-400">Sponsorships & brand inquiries</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500 group-hover:text-goldAccent transition"></i>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: Digital Products & Creator Kits -->
+        <section id="products" class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-goldAccent flex items-center gap-2">
+                        <i class="fa-solid fa-box-open"></i> Creator Store
+                    </h2>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Digital Products & Kits</h3>
+                </div>
+                <span class="text-xs text-gray-400 font-serif italic">3 Available Assets</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+                <!-- Product 1 -->
+                <div class="aesthetic-card rounded-2xl p-5 flex flex-col justify-between space-y-5 group">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-goldAccent/10 border border-goldAccent/20 flex items-center justify-center text-goldAccent text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-goldAccent/20 text-goldAccent px-2 py-0.5 rounded">Popular</span>
+                            <span class="text-[11px] text-gray-400">PDF + Notion</span>
+                        </div>
+                        <h4 class="font-bold text-base text-white group-hover:text-goldAccent transition">Freelancer AI Client Kit</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Master prompts and step-by-step workflow guides to onboard, communicate, and deliver for clients effortlessly.
+                        </p>
+                    </div>
+                    <a href="https://payhip.com/b/v31Kj" target="_blank" class="w-full py-2.5 rounded-xl bg-goldAccent hover:bg-goldHover text-black font-bold text-xs transition text-center block shadow-md">
+                        Get Kit <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="aesthetic-card rounded-2xl p-5 flex flex-col justify-between space-y-5 group">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-cardBorder text-gray-400 px-2 py-0.5 rounded">Canva</span>
+                            <span class="text-[11px] text-gray-400">30 Templates</span>
+                        </div>
+                        <h4 class="font-bold text-base text-white group-hover:text-amber-300 transition">Social Media Starter Kit</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            30 customizable aesthetic Canva social media templates for real estate, branding, and content creators.
+                        </p>
+                    </div>
+                    <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-goldAccent hover:text-black border border-cardBorder text-gray-200 font-bold text-xs transition text-center block">
+                        Get Templates <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="aesthetic-card rounded-2xl p-5 flex flex-col justify-between space-y-5 group">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400 text-xl group-hover:scale-105 transition">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-cardBorder text-gray-400 px-2 py-0.5 rounded">4K Overlay</span>
+                            <span class="text-[11px] text-gray-400">Video Pack</span>
+                        </div>
+                        <h4 class="font-bold text-base text-white group-hover:text-yellow-300 transition">Animation Overlays Pack</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Aesthetic video animation overlays and motion elements to elevate YouTube shorts and Instagram reels.
+                        </p>
+                    </div>
+                    <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-goldAccent hover:text-black border border-cardBorder text-gray-200 font-bold text-xs transition text-center block">
+                        Download Overlays <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: YouTube Feature Banner -->
+        <section class="aesthetic-card rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center sm:text-left">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-500 flex items-center justify-center sm:justify-start gap-2">
+                        <i class="fa-brands fa-youtube"></i> YouTube Tutorials
+                    </span>
+                    <h3 class="text-xl font-bold text-white">Subscribe to Aman X ai</h3>
+                    <p class="text-xs text-gray-400 max-w-md">Learn step-by-step how to design digital assets, craft master prompts, and grow on Pinterest.</p>
+                </div>
+                <a href="https://youtube.com" target="_blank" class="px-5 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs transition flex items-center gap-2 shadow-lg shrink-0">
+                    <i class="fa-brands fa-youtube text-base"></i> Subscribe Channel
+                </a>
+            </div>
+        </section>
+
+
+        <!-- SECTION 5: Minimal FAQs -->
+        <section id="faq" class="space-y-4 max-w-2xl mx-auto">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-goldAccent text-center">Frequently Asked Questions</h2>
+
+            <div class="space-y-3 text-xs">
+                <div class="aesthetic-card rounded-xl p-4 space-y-1">
+                    <h4 class="font-bold text-white">How do I access the Canva templates after purchase?</h4>
+                    <p class="text-gray-400 leading-relaxed">You will receive an instant link to copy the templates directly into your free Canva account.</p>
+                </div>
+
+                <div class="aesthetic-card rounded-xl p-4 space-y-1">
+                    <h4 class="font-bold text-white">Can I use these assets for client projects?</h4>
+                    <p class="text-gray-400 leading-relaxed">Yes! All kits include a commercial license for personal and client projects.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-cardBorder py-6 text-center text-xs text-gray-500 bg-[#080809]">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© 2026 Aman.zenith . All rights reserved.</p>
+            <p class="font-serif italic text-goldAccent/80">Curated Resources for Creators</p>
+        </div>
+    </footer>
+
+</body>
+</html>
